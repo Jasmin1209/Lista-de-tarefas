@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2; /*A tela ficou dessa cor*/
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center; /*Ajusta no centro da tela*/
+    align-items: center;
+}
+
+.container{
+    background-color: white; /*A caixa ficou dessa cor*/
+
+    width: 90%; /*Tamanho da caixa em relação a tela*/
+    max-width: 600px; /*O máximo que a caixa pode ir*/
+
+    padding: 30x;
+
+    border-radius: 10px;
+}
+
+h1{ /*Configurações o H1*/
+    text-align: center;
+    margin-bottom: 25px;
+}
+
