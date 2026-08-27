@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Lista de Tarefas</h1>
+
+        <section class="form-tarefa">
+            <input type="text" id="tarefa" placeholder="Digite uma tarefa...">
+            <button id="btnAdicionar">Adicionar</button>
+        </section>
+
+        <ul id="listaTarefas">
+            <li class="tarefa">
+                <span>Estudar JavaScript</span>
+                <button class="btn-excluir">🗑️</button>
+            </li>
+            <li class="tarefa">
+                <span>Estudar Banco de Dados</span>
+                <button class="btn-excluir">🗑️</button>
+            </li>
+            <li class="tarefa concluida">
+                <span>Fazer Exercícios</span>
+                <button class="btn-excluir">🗑️</button>
+            </li>
+        </ul>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
