@@ -19,8 +19,17 @@ btnAdicionar.addEventListener("click", function() { //Quando o botão for clicad
     //Insere no HTML para visualização
     li.innerHTML = ` 
         <span>${texto}</span>
-        <button class="btn-excluir">🗑️</button>
+        <div class="acoes">
+            <button class="btn-excluir">🗑️</button>
+            <button class="btn-concluir">✔️</button>
+        </div>
     `;
+
+    const botaoExcluir = li.querySelector(".btn-excluir"); //Seleciona o botão de excluir
+    adicionarEventoExcluir(botaoExcluir); //Adiciona o evento de excluir
+
+    const botaoConcluir = li.querySelector(".btn-concluir");
+    adicionarEventoExcluir(botaoConcluir);
 
     lista.appendChild(li); //faz aparecer na tela
 
@@ -34,4 +43,37 @@ inputTarefa.addEventListener("keydown", function(event){
         }
 });
 
+function adicionarEventoExcluir(botao){
+    botao.addEventListener("click", function(){
+        // parentElement vai pegar o "pai" de botao que é o item "li                   "
+        const li = botao.parentElement; 
+        li.remove();
+    });
+}
+
+const botoesExcluir = document.querySelectorAll(".btn-excluir"); //Seleciona todos os botões de excluir
+botoesExcluir.forEach(function(botao){
+    adicionarEventoExcluir(botao); //Adiciona o evento de excluir para cada botão
+});
+
+function adicionarEventoConcluir(botao){
+    botao.addEventListener("click", function(){
+        // A div é um "pai" e li é outro
+        const li = botao.parentElement.parentElement;
+        // Toggle adiciona uma classe quando não existe, e remove quando existe
+        li.classList.toggle("concluida");
+
+        // Colocar outro icone 
+        if(li.classList.contains("concluida")){ 
+            botao.textContent="↩";
+        }else{
+            botao.textContent="✔️";
+        }
+    });
+}
+
+const botoesConcluir = document.querySelectorAll(".btn-concluir"); //Seleciona todos os botões de excluir
+botoesConcluir.forEach(function(botao){
+    adicionarEventoConcluir(botao); //Adiciona o evento de concluir para cada botão
+});
 
