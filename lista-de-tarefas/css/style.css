@@ -21,7 +21,7 @@ body{
     width: 90%; /*Tamanho da caixa em relação a tela*/
     max-width: 600px; /*O máximo que a caixa pode ir*/
 
-    padding: 30x;
+    padding: 30Px;
 
     border-radius: 10px;
 }
@@ -31,3 +31,52 @@ h1{ /*Configurações o H1*/
     margin-bottom: 25px;
 }
 
+.form-tarefa {
+    display: flex;
+    gap: 30px; /*Espaço entre o espaço de texto e o botão de ADICIONAR*/
+    margin-bottom: 25px;
+}
+
+.form-tarefa input { /*Espaço de texto adicionar*/
+    flex: 1; /*Analisa essa configuração*/
+
+    padding: 10px;/*Espaço entre o contéudo e caixa*/
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-tarefa button {
+    padding: 10px 15px;
+
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer; /* 'mãozinha' do mouse*/
+}
+
+#listaTarefas {
+    list-style: none; /*tira as bolinhas da lista*/
+}
+
+.tarefa {
+    display: flex; /* 'separou' o texto do botão*/
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.tarefa.concluida span {
+    text-decoration: line-through; /*Coloca uma linha no nome*/
+    opacity: 0.5;
+}
+
+.btn-excluir{
+    border: none; /*Tira a borda e a cor de fundo*/
+    background: none;
+
+    cursor: pointer;
+}
